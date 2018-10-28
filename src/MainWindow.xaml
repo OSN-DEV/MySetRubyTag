@@ -1,0 +1,63 @@
+﻿<Window x:Class="MySetRubyTag.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MySetRubyTag"
+        mc:Ignorable="d"
+        Title="MainWindow"  Height="240" Width="525" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10" Name="cSrcText" TextChanged="cSrcText_TextChanged" MaxLength="100" MaxLines="1"/>
+
+        <TextBox Grid.Row="2" Grid.Column="0" Text="{Binding Ruby0}" Name="cRuby0" TextChanged="cRuby_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Ruby1}" Name="cRuby1" TextChanged="cRuby_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Ruby2}" Name="cRuby2" TextChanged="cRuby_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding Ruby3}" Name="cRuby3" TextChanged="cRuby_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="4" Text="{Binding Ruby4}" Name="cRuby4" TextChanged="cRuby_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="5" Text="{Binding Ruby5}" Name="cRuby5" TextChanged="cRuby_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="6" Text="{Binding Ruby6}" Name="cRuby6" TextChanged="cRuby_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="7" Text="{Binding Ruby7}" Name="cRuby7" TextChanged="cRuby_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="8" Text="{Binding Ruby8}" Name="cRuby8" TextChanged="cRuby_TextChanged"/>
+        <TextBox Grid.Row="2" Grid.Column="9" Text="{Binding Ruby9}" Name="cRuby9" TextChanged="cRuby_TextChanged"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="{Binding Char0}" Name="cChar0" TextAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Char1}" Name="cChar1" TextAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="2" Text="{Binding Char2}" Name="cChar2" TextAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="3" Text="{Binding Char3}" Name="cChar3" TextAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="4" Text="{Binding Char4}" Name="cChar4" TextAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="5" Text="{Binding Char5}" Name="cChar5" TextAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="6" Text="{Binding Char6}" Name="cChar6" TextAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="7" Text="{Binding Char7}" Name="cChar7" TextAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="8" Text="{Binding Char8}" Name="cChar8" TextAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="9" Text="{Binding Char9}" Name="cChar9" TextAlignment="Center"/>
+
+        <!-- <Frame Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="10" Name="cPreview" />-->
+         <WebBrowser Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="10" Name="cPreview" />
+        <Button Grid.Row="8" Grid.Column="0" Content="Save" Click="cSave_Click" Name="cSave" />
+        <Button Grid.Row="8" Grid.Column="9" Content="Copy" Click="cCopy_Click" />
+    </Grid>
+</Window>
